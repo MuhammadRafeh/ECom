@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
+import colors from '../constants/constants';
 
-const OnBoarding = props => {
+const OnBoarding = (props: any) => {
     useEffect(() => {
         setTimeout(() => props.navigation.replace('Auth'), 1);
     }, [])
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff'
+        backgroundColor: colors.secondary
     },
     logoText: {
         marginTop: 13
