@@ -1,19 +1,35 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
+import { hP } from '../../functions/getDPFromPercent';
 import AuthTopTabNavigator from '../../navigators/AuthNavigator/AuthTopTabNavigator/AuthTopTabNavigator';
+import constants from '../../constants/constants';
 
-const Auth = (props: any) => {
+const AuthScreen = (props: any) => {
     return (
         <View style={styles.screen}>
-            <AuthTopTabNavigator />
+            <View style={styles.firstPortion}>
+
+            </View>
+            <View style={styles.lastPortion}>
+                <AuthTopTabNavigator />
+            </View>
         </View>
     );
 }
 
-export default Auth;
+export default AuthScreen;
 
 const styles = StyleSheet.create({
     screen: {
-        flex: 1
+        flex: 1,
+        backgroundColor: constants.secondary,
+        paddingTop: Constants.statusBarHeight
+    },
+    firstPortion: {
+        height: hP('24')
+    },
+    lastPortion: {
+        height: hP('76')
     }
 })

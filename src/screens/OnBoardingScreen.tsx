@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import colors from '../constants/constants';
 
 const OnBoarding = (props: any) => {
     useEffect(() => {
-        setTimeout(() => props.navigation.replace('Auth'), 1);
+        setTimeout(() => props.navigation.replace('Auth'), 2);
     }, [])
     return (
         <View style={styles.screen}>
