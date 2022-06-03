@@ -7,7 +7,12 @@ const Stack = createStackNavigator();
 
 function AuthNavigator() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+            initialRouteName={'OnBoarding'}
+            screenOptions={{
+                headerShown: false
+            }}
+        >
             <Stack.Screen name="OnBoarding" component={OnBoardingScreen} />
             <Stack.Screen name="Auth" component={AuthScreen} />
         </Stack.Navigator>

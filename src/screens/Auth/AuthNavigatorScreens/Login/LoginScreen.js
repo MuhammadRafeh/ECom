@@ -3,12 +3,17 @@ import { Text, View, StyleSheet } from 'react-native';
 
 const LoginScreen = props => {
     return (
-        <View />
+        <View style={styles.screen}>
+
+        </View>
     );
 }
 
 export default LoginScreen;
 
 const styles = StyleSheet.create({
-    
+    screen: {
+        flex: 1,
+        backgroundColor: '#fff'
+    }
 })
