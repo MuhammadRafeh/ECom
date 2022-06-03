@@ -1,14 +1,12 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import AuthNavigator from './src/navigators/AuthNavigator/AuthNavigator';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <View>
-        <Text>Hello this is text</Text>
-      </View>
+      <AuthNavigator />
     </NavigationContainer>
   );
 }
