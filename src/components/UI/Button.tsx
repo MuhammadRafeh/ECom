@@ -25,14 +25,15 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 10,
+        borderRadius: 5.39655,
         overflow: 'hidden',
         backgroundColor: constants.primary
     },
     title: {
         fontSize: 18,
         letterSpacing: 0.4,
-        top: 2,
+        // top: 2,
+        lineHeight: 22,
         color: '#fff',
         transform: [
             { rotate: '-0.5deg' }

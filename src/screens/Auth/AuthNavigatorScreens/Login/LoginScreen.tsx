@@ -13,25 +13,25 @@ const LoginScreen = (props: any) => {
 
     return (
         <View style={styles.screen}>
-            <ScrollView>
-                <View style={{ width: wP('80%'), height: hP('7%') }}>
+            <ScrollView contentContainerStyle={styles.scrollViewStyle}>
+                <View style={{ width: '100%', marginTop: 20 }}>
                     <TextInput
                         value={email}
                         onChangeText={setEmail}
-                        style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62 }}
+                        style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62, padding: 10 }}
                     />
                 </View>
-                <View style={{ width: wP('80%'), height: hP('7%') }}>
+                <View style={{ width: '100%', height: hP('7%'), marginTop: 10 }}>
                     <TextInput
                         value={password}
                         onChangeText={setPassword}
-                        style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62 }}
+                        style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62, padding: 10 }}
                     />
                 </View>
                 <View>
-                    <Text>Forgot Password?</Text>
+                    <Text style={{ textAlign: 'right', marginRight: 2 }}>Forgot Password?</Text>
                 </View>
-                <View style={{ width: '50%' }}>
+                <View style={{ width: '100%', height: hP('5.5%'), marginTop: 10 }}>
                     <Button onPress={() => { alert('asd') }} title={'asd'} />
                 </View>
                 <View>
@@ -70,5 +70,9 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         backgroundColor: '#fff'
+    },
+    scrollViewStyle: {
+        marginHorizontal: '8%',
+        // alignItems: 'center'
     }
 })
