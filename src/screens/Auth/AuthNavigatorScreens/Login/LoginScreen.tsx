@@ -28,16 +28,16 @@ const LoginScreen = (props: any) => {
                         style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62, padding: 10 }}
                     />
                 </View>
-                <View>
-                    <Text style={{ textAlign: 'right', marginRight: 2 }}>Forgot Password?</Text>
+                <View style={{ marginTop: 4, marginBottom: 6 }}>
+                    <Text style={{ textAlign: 'right', marginRight: 2, color: constants.primary, fontSize: 12 }}>Forgot Password?</Text>
                 </View>
                 <View style={{ width: '100%', height: hP('5.5%'), marginTop: 10 }}>
-                    <Button onPress={() => { alert('asd') }} title={'asd'} />
+                    <Button onPress={() => { alert('Button Pressed!') }} title={'Sign in'} />
                 </View>
-                <View>
-                    <Text>Don’t have an account? <Text>Sign Up</Text></Text>
+                <View style={{ marginVertical: 16 }}>
+                    <Text style={{ textAlign: 'center', color: '#808080' }}>Don’t have an account? <Text style={{ color: 'black' }}>Sign Up</Text></Text>
                 </View>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{ flexDirection: 'row', marginTop: 60, justifyContent: 'space-around' }}>
                     <View>
                         <Google />
                     </View>
@@ -48,14 +48,14 @@ const LoginScreen = (props: any) => {
                         <Apple />
                     </View>
                 </View>
-                <View>
-                    <Text>
+                <View style={{ marginTop: 80 }}>
+                    <Text style={{ textAlign: 'center', color: 'black' }}>
                         Amet minim mollit non deserunt ullamco est sit aliqua
                         dolor do amet sint. Velit officia consequat.
                     </Text>
                 </View>
-                <View>
-                    <Text>
+                <View style={{ marginTop: 10 }}>
+                    <Text style={{ textAlign: 'right', color: constants.primary }}>
                         Skip
                     </Text>
                 </View>
