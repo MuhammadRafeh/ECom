@@ -9,7 +9,7 @@ const AuthScreen = (props: any) => {
     return (
         <View style={styles.screen}>
             <View style={styles.firstPortion}>
-                <Image source={require('../../../assets/images/UI/logo.png')} style={{ tintColor: 'white' }} resizeMode={'contain'} />
+                {/* <Image source={require('../../../assets/images/UI/logo.png')} style={{ tintColor: 'white' }} resizeMode={'contain'} /> */}
             </View>
             <View style={styles.lastPortion}>
                 <AuthTopTabNavigator />

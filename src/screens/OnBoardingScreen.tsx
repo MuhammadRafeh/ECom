@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import colors from '../constants/constants';
+import Logo from "../../assets/images/UI/logo.svg";
+import LogoText from "../../assets/images/onboarding/logoText.svg";
 
 const OnBoarding = (props: any) => {
     useEffect(() => {
@@ -8,8 +10,10 @@ const OnBoarding = (props: any) => {
     }, [])
     return (
         <View style={styles.screen}>
-            <Image source={require('../../assets/images/UI/logo.png')} />
-            <Image source={require('../../assets/images/onboarding/logoText.png')} style={styles.logoText} />
+            <Logo />
+            <View style={styles.logoText}>
+                <LogoText />
+            </View>
         </View>
     );
 }
@@ -24,6 +28,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.secondary
     },
     logoText: {
-        marginTop: 13
+        marginTop: 10
     }
 })
