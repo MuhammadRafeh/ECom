@@ -20,7 +20,7 @@ const LoginScreen = (props: any) => {
                     <TextInput
                         value={email}
                         onChangeText={setEmail}
-                        style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62, padding: 10, paddingLeft: 54 }}
+                        style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62, padding: 10, paddingLeft: 54, fontSize: 16, color: 'rgba(0, 0, 0, 0.70)' }}
                     />
                     <View style={{ position: 'absolute', bottom: 14.8, left: 16 }}>
                         <EmailSvg />
@@ -30,9 +30,9 @@ const LoginScreen = (props: any) => {
                     <TextInput
                         value={password}
                         onChangeText={setPassword}
-                        style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62, padding: 10, paddingLeft: 54 }}
+                        style={{ borderBottomWidth: 1, borderBottomColor: constants.primary, opacity: 0.62, padding: 10, paddingLeft: 54, fontSize: 16, color: 'rgba(0, 0, 0, 0.70)' }}
                     />
-                    <View style={{ position: 'absolute', bottom: 14.8, left: 16 }}>
+                    <View style={{ position: 'absolute', bottom: 16, left: 16 }}>
                         <PasswordSvg />
                     </View>
                 </View>
@@ -62,7 +62,7 @@ const LoginScreen = (props: any) => {
                     </TouchableOpacity>
                 </View>
                 <View style={{ marginTop: 83 }}>
-                    <Text style={{ textAlign: 'center', color: 'black', fontFamily: 'Inter', fontSize: 12 }}>
+                    <Text style={{ textAlign: 'center', color: 'black', fontFamily: 'Inter', fontSize: 12, letterSpacing: 0.2 }}>
                         Amet minim mollit non deserunt ullamco est sit aliqua
                         dolor do amet sint. Velit officia consequat.
                     </Text>
@@ -86,6 +86,5 @@ const styles = StyleSheet.create({
     },
     scrollViewStyle: {
         marginHorizontal: '8%',
-        // alignItems: 'center'
     }
 })
