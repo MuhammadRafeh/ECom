@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import constants from '../../constants/constants';
 
 type buttonProps = {
     title: string;
@@ -25,24 +26,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,
-        overflow: 'hidden'
-    },
-    linearGradient: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        opacity: 0.7
+        overflow: 'hidden',
+        backgroundColor: constants.primary
     },
     title: {
         fontSize: 18,
-        fontFamily: '1',
         letterSpacing: 0.4,
         top: 2,
         color: '#fff',
         transform: [
             { rotate: '-0.5deg' }
-        ]
+        ],
     }
 })
