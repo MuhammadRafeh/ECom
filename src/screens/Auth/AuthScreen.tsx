@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
         paddingTop: Constants.statusBarHeight
     },
     firstPortion: {
-        height: hP('24')
+        height: hP('24'),
+        backgroundColor: constants.primary
     },
     lastPortion: {
         height: hP('76')

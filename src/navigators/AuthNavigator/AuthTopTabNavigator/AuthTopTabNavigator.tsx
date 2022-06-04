@@ -3,7 +3,6 @@ import { View, Dimensions } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import LoginScreen from '../../../screens/Auth/AuthNavigatorScreens/Login/LoginScreen';
 import SignupScreen from '../../../screens/Auth/AuthNavigatorScreens/Signup/SignupScreen';
-import constants from '../../../constants/constants';
 
 const { width } = Dimensions.get('window');
 
@@ -17,7 +16,7 @@ function AuthTopTabNavigator() {
                 screenOptions={{
                     tabBarLabelStyle: { fontWeight: 'bold', textTransform: 'none' },
                     tabBarStyle: { elevation: 0 },
-                    tabBarIndicatorStyle: { width: width / 3, backgroundColor: constants.primary, left: width / 12, height: 3 }
+                    tabBarIndicatorStyle: { width: width / 3, backgroundColor: '#ffb74f', left: width / 12, height: 3 }
                 }}
             >
                 <Tab.Screen name="Login" component={LoginScreen} options={{ title: 'Log in' }} />
