@@ -13,6 +13,7 @@ function AuthTopTabNavigator() {
     return (
         <>
             <View style={{ position: 'absolute', height: 2, width: (width / 3 + width / 1.9), backgroundColor: "#CBCBCB", top: 46, alignSelf: 'center', opacity: 0.7 }} />
+            <View style={{ width: '100%', position: 'absolute', height: 20, top: -20, backgroundColor: 'white' }} />
             <Tab.Navigator
                 initialLayout={{ width }}
                 screenOptions={{
