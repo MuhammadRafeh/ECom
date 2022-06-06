@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 function AuthNavigator() {
     return (
         <Stack.Navigator
-            initialRouteName={'PrivacyPolicy'}
+            initialRouteName={'TermOfUse'}
             screenOptions={{
                 headerShown: false
             }}
