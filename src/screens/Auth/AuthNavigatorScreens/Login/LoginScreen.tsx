@@ -16,23 +16,23 @@ const LoginScreen = (props: any) => {
     return (
         <View style={styles.screen}>
             <ScrollView contentContainerStyle={styles.scrollViewStyle}>
-                <View style={{ width: '100%', marginTop: 20 }}>
+                <View style={{ width: '100%', marginTop: 20, justifyContent: 'center' }}>
                     <TextInput
                         value={email}
                         onChangeText={setEmail}
                         style={styles.textInput}
                     />
-                    <View style={{ position: 'absolute', bottom: 14.8, left: 16 }}>
+                    <View style={{ position: 'absolute', left: 16 }}>
                         <EmailSvg />
                     </View>
                 </View>
-                <View style={{ width: '100%', height: hP('7%'), marginTop: 10 }}>
+                <View style={{ width: '100%', height: hP('7%'), marginTop: 10, justifyContent: 'center' }}>
                     <TextInput
                         value={password}
                         onChangeText={setPassword}
                         style={styles.textInput}
                     />
-                    <View style={{ position: 'absolute', bottom: 16, left: 16 }}>
+                    <View style={{ position: 'absolute', left: 16 }}>
                         <PasswordSvg />
                     </View>
                 </View>

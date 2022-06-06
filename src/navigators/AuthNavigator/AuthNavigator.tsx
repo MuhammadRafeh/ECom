@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 function AuthNavigator() {
     return (
         <Stack.Navigator
-            initialRouteName={'TermOfUse'}
+            initialRouteName={'OnBoarding'}
             screenOptions={{
                 headerShown: false
             }}

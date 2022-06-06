@@ -17,20 +17,19 @@ const SignupScreen = (props: any) => {
     return (
         <View style={styles.screen}>
             <ScrollView contentContainerStyle={styles.scrollViewStyle}>
-                <View style={{ width: '100%', marginTop: 20 }}>
+                <View style={{ width: '100%', marginTop: 20, justifyContent: 'center' }}>
                     <TextInput
                         value={email}
                         onChangeText={setEmail}
                         style={styles.textInput}
                         placeholder={'Name'}
                         placeholderTextColor={'rgba(0, 0, 0, 0.70)'}
-
                     />
-                    <View style={{ position: 'absolute', bottom: 12, left: 4 }}>
+                    <View style={{ position: 'absolute', left: 4 }}>
                         <Person />
                     </View>
                 </View>
-                <View style={{ width: '100%', height: hP('7%'), marginTop: 10 }}>
+                <View style={{ width: '100%', height: hP('7%'), marginTop: 10, justifyContent: 'center' }}>
                     <TextInput
                         value={password}
                         onChangeText={setPassword}
@@ -38,11 +37,11 @@ const SignupScreen = (props: any) => {
                         placeholder={'Email'}
                         placeholderTextColor={'rgba(0, 0, 0, 0.70)'}
                     />
-                    <View style={{ position: 'absolute', bottom: 19, left: 4 }}>
+                    <View style={{ position: 'absolute', left: 4 }}>
                         <EmailSvg />
                     </View>
                 </View>
-                <View style={{ width: '100%', height: hP('7%'), marginTop: 10 }}>
+                <View style={{ width: '100%', height: hP('7%'), marginTop: 10, justifyContent: 'center' }}>
                     <TextInput
                         value={password}
                         onChangeText={setPassword}
@@ -51,11 +50,11 @@ const SignupScreen = (props: any) => {
                         placeholderTextColor={'rgba(0, 0, 0, 0.70)'}
 
                     />
-                    <View style={{ position: 'absolute', bottom: 16, left: 4 }}>
+                    <View style={{ position: 'absolute', left: 4 }}>
                         <PasswordSvg />
                     </View>
                 </View>
-                <View style={{ width: '100%', height: hP('7%'), marginTop: 10 }}>
+                <View style={{ width: '100%', height: hP('7%'), marginTop: 10, justifyContent: 'center' }}>
                     <TextInput
                         value={password}
                         onChangeText={setPassword}
@@ -64,7 +63,7 @@ const SignupScreen = (props: any) => {
                         placeholderTextColor={'rgba(0, 0, 0, 0.70)'}
 
                     />
-                    <View style={{ position: 'absolute', bottom: 16, left: 4 }}>
+                    <View style={{ position: 'absolute', left: 4 }}>
                         <PasswordSvg />
                     </View>
                 </View>
