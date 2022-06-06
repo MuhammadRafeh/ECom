@@ -63,11 +63,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 24,
         padding: 20,
+        paddingHorizontal: 30,
         top: -28
     },
     text: {
         textAlign: 'justify',
         fontFamily: 'Inter',
-        fontSize: 16
+        fontSize: 16,
+        lineHeight: 21.5
     }
 })
