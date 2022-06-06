@@ -11,16 +11,18 @@ import PasswordSvg from '../../../../../assets/images/auth/password.svg';
 import Person from '../../../../../assets/images/auth/person.svg';
 
 const SignupScreen = (props: any) => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [refferal, setRefferal] = useState('');
 
     return (
         <View style={styles.screen}>
             <ScrollView contentContainerStyle={styles.scrollViewStyle}>
                 <View style={{ width: '100%', marginTop: 20, justifyContent: 'center' }}>
                     <TextInput
-                        value={email}
-                        onChangeText={setEmail}
+                        value={name}
+                        onChangeText={setName}
                         style={styles.textInput}
                         placeholder={'Name'}
                         placeholderTextColor={'rgba(0, 0, 0, 0.70)'}
@@ -31,8 +33,8 @@ const SignupScreen = (props: any) => {
                 </View>
                 <View style={{ width: '100%', height: hP('7%'), marginTop: 10, justifyContent: 'center' }}>
                     <TextInput
-                        value={password}
-                        onChangeText={setPassword}
+                        value={email}
+                        onChangeText={setEmail}
                         style={styles.textInput}
                         placeholder={'Email'}
                         placeholderTextColor={'rgba(0, 0, 0, 0.70)'}
@@ -56,8 +58,8 @@ const SignupScreen = (props: any) => {
                 </View>
                 <View style={{ width: '100%', height: hP('7%'), marginTop: 10, justifyContent: 'center' }}>
                     <TextInput
-                        value={password}
-                        onChangeText={setPassword}
+                        value={refferal}
+                        onChangeText={setRefferal}
                         style={styles.textInput}
                         placeholder={'Referal Code'}
                         placeholderTextColor={'rgba(0, 0, 0, 0.70)'}
