@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, StatusBar, Text, ScrollView, StyleSheet } from 'react-native';
-import AbstractButton from '../../Components/button';
 import CreditIcon from '../../Assets/icons/checkoutScreen/credit.svg';
 import MobileMoneyIcon from '../../Assets/icons/checkoutScreen/mobile.svg';
 import BankIcon from '../../Assets/icons/checkoutScreen/bank.svg';
@@ -9,6 +8,8 @@ import constants from '../../../constants/constants';
 import { LARGE } from '../../../constants/fonts';
 import AbstractHeader from '../../../components/UI/Header';
 import AbstractTextPicker from '../../../components/UI/TextPicker';
+import AbstractButton from '../../../components/UI/Button2';
+import CheckoutItem from '../../../components/payments/Checkout/CheckoutItem';
 
 const CheckoutScreen = (props: any) => {
     const [value, setValue] = useState(false);
@@ -26,17 +27,17 @@ const CheckoutScreen = (props: any) => {
             <ScrollView showsVerticalScrollIndicator={false} style={styles.viewStyle}>
                 {/* Items */}
                 <CheckoutItem
-                    Element={props => <CreditIcon />}
+                    Element={(props: any) => <CreditIcon />}
                     title={'Credit or Debit Card'}
                 />
                 <CheckoutItem
-                    Element={props => <MobileMoneyIcon />}
+                    Element={(props: any) => <MobileMoneyIcon />}
                     title={'Mobile Money'}
                     borderColor={constants.primary}
                     selected={true}
                 />
-                <CheckoutItem Element={props => <BankIcon />} title={'Bank Transfer'} />
-                <CheckoutItem Element={props => <PayIcon />} title={'Pay in Store'} />
+                <CheckoutItem Element={(props: any)  => <BankIcon />} title={'Bank Transfer'} />
+                <CheckoutItem Element={(props: any) => <PayIcon />} title={'Pay in Store'} />
                 <View style={styles.dividerStyle} />
 
                 {/* Bank Picker */}
@@ -55,7 +56,7 @@ const CheckoutScreen = (props: any) => {
                             value: 'Meezan',
                         },
                     ]}
-                    onSelect={pickerValue => setValue({ classValue: pickerValue })}
+                    onSelect={(pickerValue: any) => setValue(pickerValue)}
                 />
                 {/* Button */}
                 <View style={{ height: 50 }} />

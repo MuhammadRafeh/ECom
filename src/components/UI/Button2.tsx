@@ -4,14 +4,14 @@ import constants from '../../constants/constants';
 import { MEDIUM } from '../../constants/fonts';
 
 type button2Props = {
-    height: number | string;
-    width: number | string;
-    backgroundColor: string;
-    borderRadius: number | string;
-    onPress: () => void;
-    btnTextSize: number | string;
-    btnFontWeight: number | string;
-    btnTextColor: string;
+    height?: number | string;
+    width?: number | string;
+    backgroundColor?: string;
+    borderRadius?: number | string;
+    onPress?: () => void;
+    btnTextSize?: number | string;
+    btnFontWeight?: number | string;
+    btnTextColor?: string;
     buttonText: string;
 }
 
