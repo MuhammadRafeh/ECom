@@ -4,7 +4,7 @@ const EcomContext = createContext();
 
 export const ContextProvider = ({ children }) => {
 
-    const [auth, setAuth] = useState(true);
+    const [auth, setAuth] = useState(false);
 
     return (
         <EcomContext.Provider value={{ auth, setAuth }}>

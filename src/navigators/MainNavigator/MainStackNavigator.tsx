@@ -1,7 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import AuthScreen from '../../screens/Auth/AuthScreen';
-import OnBoardingScreen from '../../screens/OnBoardingScreen';
+import MainBottomTabNavigator from './MainBottomTabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -13,9 +12,9 @@ function MainStackNavigator() {
                 headerShown: false
             }}
         >
-            <Stack.Screen name="MainDrawer" component={OnBoardingScreen} />
+            <Stack.Screen name="MainDrawer" component={MainBottomTabNavigator} />
         </Stack.Navigator>
     );
 }
 
-export default MainStackNavigator
+export default MainStackNavigator;
