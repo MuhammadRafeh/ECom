@@ -8,8 +8,12 @@ import Apple from '../../../../../assets/images/auth/apple.svg';
 import Google from '../../../../../assets/images/auth/google.svg';
 import EmailSvg from '../../../../../assets/images/auth/email.svg';
 import PasswordSvg from '../../../../../assets/images/auth/password.svg';
+import { useEcomContext } from '../../../../contexts/ContextProvider';
 
 const LoginScreen = (props: any) => {
+
+    const { setAuth } = useEcomContext();
+
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
@@ -40,11 +44,11 @@ const LoginScreen = (props: any) => {
                     <Text style={styles.forgotLabel}>Forgot Password?</Text>
                 </TouchableOpacity>
                 <View style={{ width: '100%', height: hP('5.5%'), marginTop: 10 }}>
-                    <Button onPress={() => { alert('Button Pressed!') }} title={'Sign in'} />
+                    <Button onPress={() => { setAuth(false) }} title={'Sign in'} />
                 </View>
                 <View style={styles.signupLabel}>
                     <Text style={{ textAlign: 'center', color: '#808080', fontFamily: 'Inter' }}>Don’t have an account? </Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => { }}>
                         <Text style={{ color: 'black', fontFamily: 'Inter' }}>
                             Sign Up
                         </Text>
