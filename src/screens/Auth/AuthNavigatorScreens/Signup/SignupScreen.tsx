@@ -11,10 +11,10 @@ import PasswordSvg from '../../../../../assets/images/auth/password.svg';
 import Person from '../../../../../assets/images/auth/person.svg';
 
 const SignupScreen = (props: any) => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [refferal, setRefferal] = useState('');
+    const [name, setName] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    const [refferal, setRefferal] = useState<string>('');
 
     return (
         <View style={styles.screen}>

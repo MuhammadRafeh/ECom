@@ -10,8 +10,8 @@ import EmailSvg from '../../../../../assets/images/auth/email.svg';
 import PasswordSvg from '../../../../../assets/images/auth/password.svg';
 
 const LoginScreen = (props: any) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
 
     return (
         <View style={styles.screen}>
