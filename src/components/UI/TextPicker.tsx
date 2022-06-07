@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Picker } from '@react-native-community/picker';
-import { PRIMARY_COLOR, WHITE_COLOR } from '../Assets/themes/colors';
 import constants from '../../constants/constants';
 
-const AbstractTextPicker = (props: any) => {
+const TextPicker = (props: any) => {
     const [pickerValue, setPickerValue] = useState('');
     const UpdateState = (pickerValue: any) => {
         setPickerValue(pickerValue);
@@ -19,7 +18,7 @@ const AbstractTextPicker = (props: any) => {
                     itemStyle={{ fontSize: 5 }}
                     selectedValue={pickerValue ? pickerValue : props.initialValue}
                     onValueChange={UpdateState}>
-                    {props?.items?.map((item, key) => (
+                    {props?.items?.map((item: any, key: number) => (
                         <Picker.Item label={item.label} value={item.value} key={key} />
                     ))}
                 </Picker>
@@ -28,7 +27,7 @@ const AbstractTextPicker = (props: any) => {
     );
 };
 
-export default AbstractTextPicker;
+export default TextPicker;
 
 const styles = StyleSheet.create({
     container: {

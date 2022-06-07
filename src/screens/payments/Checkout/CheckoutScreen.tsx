@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, StatusBar, Text, ScrollView, StyleSheet } from 'react-native';
 import AbstractButton from '../../Components/button';
-import AbstractTextPicker from '../../Components/textPicker';
 import CreditIcon from '../../Assets/icons/checkoutScreen/credit.svg';
 import MobileMoneyIcon from '../../Assets/icons/checkoutScreen/mobile.svg';
 import BankIcon from '../../Assets/icons/checkoutScreen/bank.svg';
@@ -9,6 +8,7 @@ import PayIcon from '../../Assets/icons/checkoutScreen/store.svg';
 import constants from '../../../constants/constants';
 import { LARGE } from '../../../constants/fonts';
 import AbstractHeader from '../../../components/UI/Header';
+import AbstractTextPicker from '../../../components/UI/TextPicker';
 
 const CheckoutScreen = (props: any) => {
     const [value, setValue] = useState(false);
