@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, StatusBar, Text, ScrollView, StyleSheet } from 'react-native';
 
-import CreditIcon from '../../Assets/icons/checkoutScreen/credit.svg';
-import MobileMoneyIcon from '../../Assets/icons/checkoutScreen/mobile.svg';
-import BankIcon from '../../Assets/icons/checkoutScreen/bank.svg';
-import PayIcon from '../../Assets/icons/checkoutScreen/store.svg';
+import CreditIcon from '../../../../assets/images/checkoutScreen/credit.svg';
+import MobileMoneyIcon from '../../../../assets/images/checkoutScreen/mobile.svg';
+import BankIcon from '../../../../assets/images/checkoutScreen/bank.svg';
+import PayIcon from '../../../../assets/images/checkoutScreen/store.svg';
 import constants from '../../../constants/constants';
 import { LARGE } from '../../../constants/fonts';
 import AbstractHeader from '../../../components/UI/Header';

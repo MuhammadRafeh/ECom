@@ -9,16 +9,16 @@ import {
 } from 'react-native';
 
 import Ripple from 'react-native-material-ripple';
-import MoonIcon from '../../Assets/icons/settingPage/moon.svg';
-import EditIcon from '../../Assets/icons/settingPage/edit.svg';
-import OrderIcon from '../../Assets/icons/settingPage/order.svg';
-import NotificationIcon from '../../Assets/icons/settingPage/notification.svg';
-import PaymentIcon from '../../Assets/icons/settingPage/payment.svg';
-import LanguageIcon from '../../Assets/icons/settingPage/language.svg';
-import HelpIcon from '../../Assets/icons/settingPage/help.svg';
-import ReferalIcon from '../../Assets/icons/settingPage/referal.svg';
-import TermsIcon from '../../Assets/icons/settingPage/terms.svg';
-import PrivacyIcon from '../../Assets/icons/settingPage/privacy.svg';
+import MoonIcon from '../../../../assets/images/settingPage/moon.svg';
+import EditIcon from '../../../../assets/images/settingPage/edit.svg';
+import OrderIcon from '../../../../assets/images/settingPage/order.svg';
+import NotificationIcon from '../../../../assets/images/settingPage/notification.svg';
+import PaymentIcon from '../../../../assets/images/settingPage/payment.svg';
+import LanguageIcon from '../../../../assets/images/settingPage/language.svg';
+import HelpIcon from '../../../../assets/images/settingPage/help.svg';
+import ReferalIcon from '../../../../assets/images/settingPage/referal.svg';
+import TermsIcon from '../../../../assets/images/settingPage/terms.svg';
+import PrivacyIcon from '../../../../assets/images/settingPage/privacy.svg';
 import constants from '../../../constants/constants';
 import AbstractHeader from '../../../components/UI/Header';
 import SettingItem from '../../../components/user/Setting/SettingItem';
