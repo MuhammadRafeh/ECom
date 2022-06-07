@@ -18,6 +18,7 @@ const CheckoutScreen = (props: any) => {
 
     const handlePress = () => setExpanded(!expanded);
     const handleCards = () => setCard(!card);
+    
     return (
         <View style={styles.container}>
             <StatusBar backgroundColor={constants.secondary} barStyle={'dark-content'} />
