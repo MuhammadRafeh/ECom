@@ -69,27 +69,27 @@ const CheckoutScreen = (props: any) => {
 export default CheckoutScreen;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: constants.secondary,
-  },
-  viewStyle: {
-    flex: 1,
-    flexGrow: 1,
-    marginLeft: 20,
-    marginRight: 20,
-  },
-  dividerStyle: {
-    height: 1.5,
-    backgroundColor: constants.primary,
-    width: '100%',
-    marginTop: 30,
-    marginBottom: 30,
-  },
-  headingStyle: {
-    fontSize: LARGE,
-    paddingBottom: 5,
-    fontWeight: 'bold',
-    color: constants.black,
-  },
+    container: {
+        flex: 1,
+        backgroundColor: constants.secondary,
+    },
+    viewStyle: {
+        flex: 1,
+        flexGrow: 1,
+        marginLeft: 20,
+        marginRight: 20,
+    },
+    dividerStyle: {
+        height: 1.5,
+        backgroundColor: constants.primary,
+        width: '100%',
+        marginTop: 30,
+        marginBottom: 30,
+    },
+    headingStyle: {
+        fontSize: LARGE,
+        paddingBottom: 5,
+        fontWeight: 'bold',
+        color: constants.black,
+    },
 });
