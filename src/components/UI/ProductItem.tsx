@@ -4,14 +4,12 @@ import {
     View,
     Text,
     Dimensions,
-    TouchableOpacity,
     ImageBackground,
 } from 'react-native';
-
 import Ripple from 'react-native-material-ripple';
-import constants from '../../constants/constants';
+import Icon from '@expo/vector-icons/Octicons';
 import { EXTRA_SMALL, MEDIUM, SMALL } from '../../constants/fonts';
-import Icon from '@expo/vector-icons/Ionicons';
+import constants from '../../constants/constants';
 
 const Width = Dimensions.get('window').width;
 const windowWidth = Width - 60;
@@ -21,14 +19,13 @@ const ProductItem = (props: any) => {
 
     return (
         <View style={[styles.container, { marginLeft: props.marginLeft }]}>
-            <View>
-                <ImageBackground
-                    resizeMode="contain"
-                    style={{ height: 156, width: '100%', position: 'absolute' }}
-                    imageStyle={{ borderRadius: 15 }}
-                    source={{
-                        uri: 'https://c0.wallpaperflare.com/preview/852/749/117/dark-minimalism-smartwatch-smartphone.jpg',
-                    }} />
+            <ImageBackground
+                resizeMode="contain"
+                style={{ height: 156, width: '100%' }}
+                imageStyle={{ borderRadius: 15 }}
+                source={{
+                    uri: 'https://c0.wallpaperflare.com/preview/852/749/117/dark-minimalism-smartwatch-smartphone.jpg',
+                }}>
                 <View style={styles.heartViewStyle}>
                     <Ripple
                         onPress={() => setLiked(!liked)}
@@ -39,20 +36,19 @@ const ProductItem = (props: any) => {
                             onPress={() => {
                                 console.warn('decrement');
                             }}
-                            name={liked ? 'heart' : 'heart-outline'}
+                            name={liked ? 'heart-fill' : 'heart'}
                             size={15}
                             color={constants.primary}
                         />
                     </Ripple>
                 </View>
-            </View>
-            {/* </ImageBackground> */}
+            </ImageBackground>
 
             <View style={styles.contentViewStyle}>
                 <Text style={styles.nameTextStyle}>ZAGATO Messenger</Text>
 
                 <Text style={{ flexDirection: 'row' }}>
-                    <Icon name={'star'} size={12} color={constants.primary} />
+                    <Icon name={'star-fill'} size={12} color={constants.primary} />
                     <View style={{ width: 3 }} />
                     <Text style={{ color: constants.primary, fontSize: SMALL }}>4.7</Text>
                 </Text>
@@ -101,7 +97,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     contentViewStyle: {
-        flex: 1,
+        height: 73,
         marginRight: 10,
         marginLeft: 10,
     },
