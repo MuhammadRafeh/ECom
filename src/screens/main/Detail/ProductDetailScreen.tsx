@@ -10,25 +10,28 @@ import {
     Image,
     ScrollView,
 } from 'react-native';
-import {
-    BLACK_COLOR,
-    GREY_COLOR,
-    PRIMARY_COLOR,
-    SECONDARY_COLOR,
-    WHITE_COLOR,
-} from '../../Assets/themes/colors';
-import ProductItem from '../../Components/productItem';
-import Swiper from 'react-native-swiper';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import AbstractHeader from '../../Components/header';
-import { LARGE, MEDIUM } from '../../Assets/themes/fonts';
-import AbstractTextPicker from '../../Components/textPicker';
-import CounterIcon from 'react-native-vector-icons/FontAwesome5';
-import SmoothPicker from 'react-native-smooth-picker';
-import AbstractButton from '../../Components/button';
-import CartIcon from '../../Assets/icons/cart.svg';
+// import {
+//     BLACK_COLOR,
+//     GREY_COLOR,
+//     PRIMARY_COLOR,
+//     SECONDARY_COLOR,
+//     WHITE_COLOR,
+// } from '../../Assets/themes/colors';
+
+// import ProductItem from '../../Components/productItem';
+// import Swiper from 'react-native-swiper';
+// import Icon from 'react-native-vector-icons/FontAwesome5';
+// import AbstractHeader from '../../Components/header';
+// import { LARGE, MEDIUM } from '../../Assets/themes/fonts';
+// import AbstractTextPicker from '../../Components/textPicker';
+
+// import SmoothPicker from 'react-native-smooth-picker';
+// import CartIcon from '../../../../assets/images/productDetail/cart.svg';
 import Ripple from 'react-native-material-ripple';
 import ReadMore from 'react-native-read-more-text';
+import constants from '../../../constants/constants';
+import AbstractButton from '../../../components/UI/Button2';
+import CounterIcon from '@expo/vector-icons/FontAwesome5';
 
 const dataCity = ['11', '22', '33', '44', '55', '66', '77', '88', '99', '00'];
 
