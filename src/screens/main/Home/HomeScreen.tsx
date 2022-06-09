@@ -7,14 +7,13 @@ import {
     Text,
     FlatList,
     Image,
-    StyleSheet
 } from 'react-native';
+
 import Swiper from 'react-native-swiper';
 import MenuIcon from '../../../../assets/images/HomeScreen/menu.svg';
-import Icon from '@expo/vector-icons/Ionicons';
-import ProductItem from '../../../components/UI/ProductItem';
 import constants from '../../../constants/constants';
-
+import Icon from '@expo/vector-icons/FontAwesome5';
+import ProductItem from '../../../components/UI/ProductItem';
 
 const HomeScreen = (props: any) => {
     const [products, setProducts] = useState([
@@ -29,104 +28,104 @@ const HomeScreen = (props: any) => {
     return (
         <View style={styles.container}>
             <StatusBar backgroundColor={'#FEF3E4'} barStyle={'dark-content'} />
+            <View style={{ backgroundColor: '#FEF3E4' }}>
+                <View style={{ height: 30 }} />
+                <View style={{ marginLeft: 20, marginRight: 20 }}>
+                    <View style={styles.searchContainer}>
+                        <View style={styles.searchViewStyle}>
+                            <View style={styles.roundedTextInput}>
+                                <TextInput
+                                    style={styles.textInput}
+                                    placeholder="Search"
+                                    onChangeText={text => { }}
+                                />
 
-            <View style={{ height: 30 }} />
-            <View style={{ marginLeft: 20, marginRight: 20 }}>
-                <View style={styles.searchContainer}>
-                    <View style={styles.searchViewStyle}>
-                        <View style={styles.roundedTextInput}>
-                            <TextInput
-                                style={styles.textInput}
-                                placeholder="Search"
-                                onChangeText={text => { }}
-                            />
-
-                            <View style={styles.dividerStyle} />
-                            <TouchableOpacity style={styles.searchButtonStyle}>
-                                <Icon name="search" size={17} color={constants.grey} />
-                            </TouchableOpacity>
+                                <View style={styles.dividerStyle} />
+                                <TouchableOpacity style={styles.searchButtonStyle}>
+                                    <Icon name="search" size={17} color={constants.grey} />
+                                </TouchableOpacity>
+                            </View>
                         </View>
+                        <TouchableOpacity style={styles.menuViewStyle}>
+                            <MenuIcon />
+                        </TouchableOpacity>
                     </View>
-                    <TouchableOpacity style={styles.menuViewStyle}>
-                        <MenuIcon />
-                    </TouchableOpacity>
-                </View>
 
-                <View style={{ height: 20 }} />
+                    <View style={{ height: 20 }} />
 
-                <View style={styles.tabViewStyle}>
-                    <TouchableOpacity
-                        onPress={() => {
-                            setPopular(true);
-                            setViewed(false);
-                        }}
-                        style={styles.buttonStyle}>
-                        <Text
-                            style={{
-                                color: popular ? 'black' : 'grey',
-                                fontSize: 14,
-                                fontWeight: popular ? '500' : '300',
-                            }}>
-                            Popular
-                        </Text>
-                        {popular && <View style={styles.underlineStyle} />}
-                    </TouchableOpacity>
-
-                    <View style={{ width: 50 }} />
-                    <TouchableOpacity
-                        onPress={() => {
-                            setPopular(false);
-                            setViewed(true);
-                        }}
-                        style={styles.buttonStyle}>
-                        <Text
-                            style={{
-                                color: viewed ? 'black' : 'grey',
-                                fontSize: 14,
-                                fontWeight: viewed ? '500' : '300',
-                            }}>
-                            Recently Viewed
-                        </Text>
-                        {viewed && <View style={[styles.underlineStyle, { width: 110 }]} />}
-                    </TouchableOpacity>
-                </View>
-
-                <View style={{ height: 25 }} />
-
-                {/* Swiper */}
-                <View style={{ height: 175 }}>
-                    <Swiper
-                        loop={false}
-                        showsButtons={false}
-                        showsPagination={true}
-                        paginationStyle={{ marginBottom: 0 }}
-                        dotColor={constants.primary}
-                        dot={<View style={styles.inActiveDotStyle} />}
-                        activeDot={<View style={styles.activeDotStyle} />}>
-                        <Image
-                            source={{ uri: 'https://wallpaperaccess.com/full/1209562.jpg' }}
-                            style={styles.imageStyle}
-                        />
-                        <Image
-                            source={{
-                                uri: 'https://images3.alphacoders.com/823/thumb-1920-82317.jpg',
+                    <View style={styles.tabViewStyle}>
+                        <TouchableOpacity
+                            onPress={() => {
+                                setPopular(true);
+                                setViewed(false);
                             }}
-                            style={styles.imageStyle}
-                        />
-                        <Image
-                            source={{
-                                uri: 'https://image.shutterstock.com/image-photo/full-hd-image-ladybird-on-260nw-1952398060.jpg',
+                            style={styles.buttonStyle}>
+                            <Text
+                                style={{
+                                    color: popular ? 'black' : 'grey',
+                                    fontSize: 14,
+                                    fontWeight: popular ? '500' : '300',
+                                }}>
+                                Popular
+                            </Text>
+                            {popular && <View style={styles.underlineStyle} />}
+                        </TouchableOpacity>
+
+                        <View style={{ width: 50 }} />
+                        <TouchableOpacity
+                            onPress={() => {
+                                setPopular(false);
+                                setViewed(true);
                             }}
-                            style={styles.imageStyle}
-                        />
-                        <Image
-                            source={{ uri: 'https://wallpaperaccess.com/full/1209562.jpg' }}
-                            style={styles.imageStyle}
-                        />
-                    </Swiper>
+                            style={styles.buttonStyle}>
+                            <Text
+                                style={{
+                                    color: viewed ? 'black' : 'grey',
+                                    fontSize: 14,
+                                    fontWeight: viewed ? '500' : '300',
+                                }}>
+                                Recently Viewed
+                            </Text>
+                            {viewed && <View style={styles.underlineStyle} />}
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
+            <View style={{ height: 25 }} />
 
+            {/* Swiper */}
+            <View style={{ height: 180, marginLeft: 20, marginRight: 20 }}>
+                <Swiper
+                    loop={false}
+                    showsButtons={false}
+                    showsPagination={true}
+                    paginationStyle={{ bottom: -10 }}
+                    dotColor={constants.primary}
+                    dot={<View style={styles.inActiveDotStyle} />}
+                    activeDot={<View style={styles.activeDotStyle} />}>
+                    <Image
+                        source={{ uri: 'https://wallpaperaccess.com/full/1209562.jpg' }}
+                        style={styles.imageStyle}
+                    />
+                    <Image
+                        source={{
+                            uri: 'https://images3.alphacoders.com/823/thumb-1920-82317.jpg',
+                        }}
+                        style={styles.imageStyle}
+                    />
+                    <Image
+                        source={{
+                            uri: 'https://image.shutterstock.com/image-photo/full-hd-image-ladybird-on-260nw-1952398060.jpg',
+                        }}
+                        style={styles.imageStyle}
+                    />
+                    <Image
+                        source={{ uri: 'https://wallpaperaccess.com/full/1209562.jpg' }}
+                        style={styles.imageStyle}
+                    />
+                </Swiper>
+            </View>
+            <View style={{ height: 15 }} />
             <FlatList
                 contentContainerStyle={{
                     justifyContent: 'space-evenly',
@@ -149,7 +148,7 @@ export default HomeScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FEF3E4',
+        backgroundColor: constants.secondary,
     },
     searchContainer: {
         height: 50,
@@ -173,6 +172,7 @@ const styles = StyleSheet.create({
         height: 50,
         borderColor: constants.primary,
         borderWidth: 1,
+        opacity: 0.5,
     },
 
     textInput: {
@@ -198,10 +198,11 @@ const styles = StyleSheet.create({
     },
     underlineStyle: {
         height: 3,
-        width: 50,
+        width: 40,
         backgroundColor: constants.primary,
         alignSelf: 'center',
         marginTop: 3,
+        borderRadius: 10,
     },
     listStyle: {
         marginLeft: 20,

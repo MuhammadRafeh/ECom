@@ -15,7 +15,7 @@ const Width = Dimensions.get('window').width;
 const windowWidth = Width - 60;
 
 const ProductItem = (props: any) => {
-    const [liked, setLiked] = useState<boolean>(false);
+    const [liked, setLiked] = useState(false);
 
     return (
         <View style={[styles.container, { marginLeft: props.marginLeft }]}>
@@ -53,7 +53,7 @@ const ProductItem = (props: any) => {
                     <Text style={{ color: constants.primary, fontSize: SMALL }}>4.7</Text>
                 </Text>
 
-                <View style={{ height: 33, flexDirection: 'row', marginTop: 2 }}>
+                <View style={{ flexDirection: 'row', marginTop: 2 }}>
                     <View style={styles.textViewStyle}>
                         <Text style={styles.textStyle}>#5000</Text>
                     </View>
@@ -100,12 +100,12 @@ const styles = StyleSheet.create({
         height: 73,
         marginRight: 10,
         marginLeft: 10,
+        justifyContent: 'center',
     },
     nameTextStyle: {
         color: constants.black,
         fontSize: SMALL,
         fontWeight: 'bold',
-        paddingTop: 2,
     },
     textViewStyle: { flex: 1 },
     textStyle: {
