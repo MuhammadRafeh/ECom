@@ -92,7 +92,7 @@ const ItemToRender = ({ item, index }, indexSelected: any, vertical: any) => {
     );
 };
 
-const DetailScreen = (props: any) => {
+const ProductDetailScreen = (props: any) => {
     const [products, setProducts] = useState([
         { id: 1 },
         { id: 2 },
@@ -376,7 +376,7 @@ const DetailScreen = (props: any) => {
     );
 };
 
-export default DetailScreen;
+export default ProductDetailScreen;
 
 const styles = StyleSheet.create({
     container: {
