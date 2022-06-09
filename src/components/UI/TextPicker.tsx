@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { Picker } from '@react-native-community/picker';
 import constants from '../../constants/constants';
 
-const TextPicker = (props: any) => {
+const AbstractTextPicker = (props: any) => {
     const [pickerValue, setPickerValue] = useState('');
     const UpdateState = (pickerValue: any) => {
         setPickerValue(pickerValue);
@@ -27,7 +27,7 @@ const TextPicker = (props: any) => {
     );
 };
 
-export default TextPicker;
+export default AbstractTextPicker;
 
 const styles = StyleSheet.create({
     container: {
