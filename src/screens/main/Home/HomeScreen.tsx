@@ -7,6 +7,7 @@ import {
     Text,
     FlatList,
     Image,
+    StyleSheet
 } from 'react-native';
 
 import Swiper from 'react-native-swiper';
