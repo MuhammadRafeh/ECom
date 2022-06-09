@@ -1,5 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AddToCartScreen from '../../screens/main/AddToCart/AddToCartScreen';
+import ProductDetailScreen from '../../screens/main/Detail/ProductDetailScreen';
 import FavoriteScreen from '../../screens/main/Favorite/FavoriteScreen';
 import HomeScreen from '../../screens/main/Home/HomeScreen';
 import MenuScreen from '../../screens/main/Menu/MenuScreen';
@@ -16,7 +17,7 @@ function MainBottomTabNavigator() {
         >
             <Tab.Screen name="Home" component={HomeScreen} />
             <Tab.Screen name="Favorite" component={FavoriteScreen} />
-            <Tab.Screen name="Options" component={OptionsScreen} />
+            <Tab.Screen name="Options" component={ProductDetailScreen} />
             <Tab.Screen name="AddToCart" component={AddToCartScreen} />
             <Tab.Screen name="Menu" component={MenuScreen} />
         </Tab.Navigator>
