@@ -1,20 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import AuthNavigator from './src/navigators/AuthNavigator/AuthNavigator';
+import { useFonts } from 'expo-font';
+import { View } from 'react-native';
+import MainStackNavigator from './src/navigators/MainNavigator/MainStackNavigator';
+import { ContextProvider, useEcomContext } from './src/contexts/ContextProvider';
 
-export default function App() {
+function App() {
+  const { auth } = useEcomContext();
+  let [fontsLoaded] = useFonts({
+    'Inter': require('./assets/fonts/inter.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return <View />
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      {
+        auth ? (
+          <AuthNavigator />
+        ) : (
+          <MainStackNavigator />
+        )
+      }
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const AppWrapper = () => {
+  return (
+    <ContextProvider>
+      <App />
+    </ContextProvider>
+  )
+}
+
+export default AppWrapper;
